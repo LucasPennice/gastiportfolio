@@ -27,12 +27,20 @@ export const PersonalProjects = () => {
 						{item.links && (
 							<section className='flex gap-8 text-5xl text-slate-400 '>
 								{item.links.live && (
-									<a target='_blank' href={item.links.live} className='transition-all hover:text-celesteOscuro'>
+									<a
+										target='_blank'
+										rel='noreferrer'
+										href={item.links.live}
+										className='transition-all hover:text-celesteOscuro'>
 										<BiWorld />
 									</a>
 								)}
 								{item.links.repo && (
-									<a target='_blank' href={item.links.repo} className='transition-all hover:text-celesteOscuro'>
+									<a
+										target='_blank'
+										rel='noreferrer'
+										href={item.links.repo}
+										className='transition-all hover:text-celesteOscuro'>
 										<AiFillGithub />
 									</a>
 								)}
