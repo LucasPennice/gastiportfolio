@@ -26,7 +26,6 @@ main {
 
 .offBanner,
 .onBanner {
-	background-color: teal;
 	transition: 0.4s ease-in-out;
 	aspect-ratio: 1;
 	z-index: 1;
@@ -36,12 +35,60 @@ main {
 	top: 1rem;
 	right: calc(100% - 4rem);
 	width: 3rem;
+	animation: move2 1.2s both;
+}
+
+.onBanner > * {
+	animation: canvasAppear2 0.3s 0.8s both ease-in-out;
+}
+
+@keyframes move2 {
+	from {
+		background-color: var(--celesteOscuro);
+		border-radius: 50%;
+		filter: blur(3px);
+	}
+	to {
+		border-radius: 100%;
+	}
+}
+@keyframes move {
+	from {
+		background-color: var(--celesteOscuro);
+		border-radius: 50%;
+		filter: blur(3px);
+	}
+	to {
+		border-radius: 100%;
+	}
+}
+
+@keyframes canvasAppear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes canvasAppear2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .offBanner {
 	right: 3rem;
 	top: calc(40px + 5rem);
 	width: clamp(300px, 40%, 500px);
+	animation: move 1.2s both;
+}
+
+.offBanner > * {
+	animation: canvasAppear 0.3s 0.8s both ease-in-out;
 }
 
 @media (min-width: 1280px) {
@@ -66,6 +113,16 @@ main {
 	}
 	.heroSection > div {
 		width: 100%;
+	}
+	.heroSection > div > h1 {
+		font-size: 1.2rem;
+	}
+	.heroSection > div > h2 {
+		font-size: 1.1rem;
+	}
+	.heroSection > div > .btn {
+		width: 100% !important;
+		text-align: center;
 	}
 }
 
@@ -98,6 +155,7 @@ header > aside > a {
 	background-size: 150% 150%;
 	color: var(--negro);
 	transition: 0.2s;
+	width: 10rem;
 }
 
 @media (min-width: 900px) {
@@ -106,10 +164,13 @@ header > aside > a {
 	}
 }
 
-.logo {
+.linearText {
 	background: -webkit-linear-gradient(-80deg, var(--celeste), var(--celesteOscuro));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.logo {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }

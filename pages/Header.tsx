@@ -8,17 +8,20 @@ export const Header = ({ isOnBanner, isMobile }: { isOnBanner: boolean; isMobile
 	return (
 		<header className='sticky top-0 flex justify-end w-full h-20 px-1 mb-8 backdrop-blur-md py-9 align-center'>
 			<Cubo isOnBanner={isOnBanner} />
-			<h1 className={`absolute top-6 transition-all font-bold text-2xl ${isOnBanner ? 'left-20' : 'left-5'} logo`}>
-				Gaston
+			<h1
+				className={`absolute top-6 transition-all font-bold text-2xl ${
+					isOnBanner ? 'left-20' : 'left-5'
+				} logo linearText`}>
+				{isMobile ? 'G.M' : 'Gaston'}
 			</h1>
 			<aside className='flex items-center w-3/5 justify-evenly text-end'>
 				<a href='#' onClick={() => scrollTo(0, 0)}>
-					{isMobile ? 'Top' : <TbArrowTopCircle />}
+					{isMobile ? <TbArrowTopCircle /> : 'Top'}
 				</a>
-				<Link href='#workSection'>{isMobile ? 'Work' : <AiOutlineHome />}</Link>
-				<Link href='#projectSection'>{isMobile ? 'Projects' : <MdOutlineWorkOutline />}</Link>
-				<Link href='#cvSection'>{isMobile ? 'Cv' : <AiOutlineBook />}</Link>
-				<Link href='#contactSection'>{isMobile ? 'Contact' : <CgMail />}</Link>
+				<Link href='#workSection'>{isMobile ? <AiOutlineHome /> : 'Work'}</Link>
+				<Link href='#projectSection'>{isMobile ? <MdOutlineWorkOutline /> : 'Projects'}</Link>
+				<Link href='#aboutSection'>{isMobile ? <AiOutlineBook /> : 'About'}</Link>
+				<Link href='#contactSection'>{isMobile ? <CgMail /> : 'Contact'}</Link>
 			</aside>
 		</header>
 	);
