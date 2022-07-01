@@ -1,7 +1,7 @@
 import { Spacer } from '../components/Spacer';
 import { aboutMeData } from '../data';
 
-export const AboutMe = () => {
+const AboutMe = () => {
 	return (
 		<section id='aboutSection' className='px-11'>
 			<Spacer />
@@ -34,3 +34,5 @@ export const AboutMe = () => {
 		</section>
 	);
 };
+
+export default AboutMe;

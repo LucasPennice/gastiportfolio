@@ -26,3 +26,4 @@ export const Header = ({ isOnBanner, isMobile }: { isOnBanner: boolean; isMobile
 		</header>
 	);
 };
+export default Header;

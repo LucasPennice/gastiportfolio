@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Spacer } from '../components/Spacer';
 import { workExperienceData } from '../data';
 
-export const WorkExperience = () => {
+const WorkExperience = () => {
 	return (
 		<section id='workSection' className='px-11'>
 			<Spacer />
@@ -29,3 +29,4 @@ export const WorkExperience = () => {
 		</section>
 	);
 };
+export default WorkExperience;

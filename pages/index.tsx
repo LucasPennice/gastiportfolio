@@ -1,12 +1,11 @@
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
-import { Spacer } from '../components/Spacer';
-import { AboutMe } from './AboutMe';
-import { Contact } from './Contact';
-import { Header } from './Header';
-import { HeroSection } from './HeroSection';
-import { PersonalProjects } from './PersonalProjects';
-import { WorkExperience } from './WorkExperience';
+import AboutMe from './AboutMe';
+import Contact from './Contact';
+import Header from './Header';
+import HeroSection from './HeroSection';
+import PersonalProjects from './PersonalProjects';
+import WorkExperience from './WorkExperience';
 
 const HomePage: NextPage = () => {
 	const [isOnBanner, setIsOnBanner] = useState<boolean>(false);

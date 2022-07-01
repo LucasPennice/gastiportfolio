@@ -3,7 +3,7 @@ import { BiWorld } from 'react-icons/bi';
 import { AiFillGithub } from 'react-icons/ai';
 import { personalProjectData } from '../data';
 
-export const PersonalProjects = () => {
+const PersonalProjects = () => {
 	return (
 		<section id='projectSection' className='px-11'>
 			<Spacer />
@@ -52,3 +52,4 @@ export const PersonalProjects = () => {
 		</section>
 	);
 };
+export default PersonalProjects;

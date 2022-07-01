@@ -1,7 +1,7 @@
 import { Spacer } from '../components/Spacer';
 import { contactData } from '../data';
 
-export const Contact = () => {
+const Contact = () => {
 	return (
 		<section id='contactSection' className='pb-36 px-11'>
 			<Spacer />
@@ -19,3 +19,4 @@ export const Contact = () => {
 		</section>
 	);
 };
+export default Contact;
